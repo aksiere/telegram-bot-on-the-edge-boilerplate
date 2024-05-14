@@ -5,3 +5,6 @@
 
 # deploy?
 `npm run deploy`
+
+# wrangler.toml
+don't forget to change `[vars]` and `[triggers]` timers
