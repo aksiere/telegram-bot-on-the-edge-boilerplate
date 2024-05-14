@@ -1,4 +1,4 @@
-name = 'cloudflare-worker-telegram-bot-with-sql-boilerplate'
+name = 'cloudflare-worker-telegram-bot-with-sql-and-crons-boilerplate'
 main = 'src/index.js'
 compatibility_date = '2024-05-14'
 
@@ -7,6 +7,7 @@ crons = ['*/30 * * * *']
 
 [vars]
 BOT_TOKEN='PLACE_YOUR_BOT_TOKEN_HERE'
+BOT_SECRET_TOKEN='PLACE_YOUR_SECRET_TOKEN_HERE' # and do not forget to set &secret_token= with /setWebhook
 POSTGRES_URL='PLACE_YOUR_POSTGRES_URL_HERE'
 
 [placement]

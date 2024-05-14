@@ -6,7 +6,7 @@ export default {
 		const { url, method } = req
 		const { pathname } = new URL(url)
 
-		if (method === 'POST' && pathname === '/bot') { // or maybe verify the headers?
+		if (method === 'POST' && pathname === '/bot' && req.headers.get('X-Telegram-Bot-Api-Secret-Token') === env.BOT_SECRET_TOKEN) {
 			const bot = new Bot(env.BOT_TOKEN)
 			const sql = neon(env.POSTGRES_URL)
 
