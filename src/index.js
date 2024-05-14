@@ -3,7 +3,7 @@ import { neon } from '@neondatabase/serverless'
 
 export default {
 	async fetch(req, env, ctx) {
-		const { url, method } = await req
+		const { url, method } = req
 		const { pathname } = new URL(url)
 
 		if (method === 'POST' && pathname === '/bot' && req.headers.get('X-Telegram-Bot-Api-Secret-Token') === env.BOT_SECRET_TOKEN) {
