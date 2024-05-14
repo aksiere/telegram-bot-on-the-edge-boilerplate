@@ -8,3 +8,6 @@
 
 # wrangler.toml
 don't forget to change `[vars]` and `[triggers]` timers
+
+# setWebhook
+`https://api.telegram.org/bot<BOT_TOKEN>/setWebhook?url=<WEBHOOK_URL>&secret_token=<BOT_SECRET_TOKEN>`
