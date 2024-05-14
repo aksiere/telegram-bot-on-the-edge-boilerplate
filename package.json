@@ -1,0 +1,17 @@
+{
+	"name": "cloudflare-worker-telegram-bot",
+	"version": "0.0.0",
+	"author": {
+		"name": "aksiere",
+		"email": "helge@duck.com"
+	},
+	"devDependencies": {
+		"@neondatabase/serverless": "^0.9.3",
+		"grammy": "^1.23.0",
+		"wrangler": "3.55.0"
+	},
+	"scripts": {
+		"start": "wrangler dev",
+		"deploy": "wrangler deploy"
+	}
+}

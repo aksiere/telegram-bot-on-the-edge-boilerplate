@@ -1,0 +1,13 @@
+name = 'cloudflare-worker-telegram-bot-with-sql-boilerplate'
+main = 'src/index.js'
+compatibility_date = '2024-05-14'
+
+[triggers]
+crons = ['*/30 * * * *']
+
+[vars]
+BOT_TOKEN='PLACE_YOUR_BOT_TOKEN_HERE'
+POSTGRES_URL='PLACE_YOUR_POSTGRES_URL_HERE'
+
+[placement]
+mode = 'smart'
