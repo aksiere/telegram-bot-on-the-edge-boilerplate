@@ -3,10 +3,10 @@ import { neon } from '@neondatabase/serverless'
 
 export default {
 	async fetch(req, env, ctx) {
-		const { url, method } = req
+		const { url, method, headers } = req
 		const { pathname } = new URL(url)
 
-		if (method === 'POST' && pathname === '/bot' && req.headers.get('X-Telegram-Bot-Api-Secret-Token') === env.BOT_SECRET_TOKEN) {
+		if (method === 'POST' && pathname === '/bot' && headers.get('x-telegram-bot-api-secret-token') === env.BOT_SECRET) {
 			const bot = new Bot(env.BOT_TOKEN)
 			const sql = neon(env.POSTGRES_URL)
 
@@ -19,7 +19,7 @@ export default {
 				await ctx.reply(JSON.stringify(result))
 			})
 
-			return await webhookCallback(bot, 'cloudflare-mod')(req)
+			return await webhookCallback(bot, 'cloudflare-mod', { secretToken: env.BOT_SECRET })(req)
 		}
 
 		return new Response('hello world!')
