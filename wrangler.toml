@@ -7,7 +7,7 @@ crons = ['*/30 * * * *']
 
 [vars]
 BOT_TOKEN='PLACE_YOUR_BOT_TOKEN_HERE'
-BOT_SECRET_TOKEN='PLACE_YOUR_SECRET_TOKEN_HERE' # and do not forget to set &secret_token= with /setWebhook
+BOT_SECRET='PLACE_YOUR_SECRET_TOKEN_HERE' # and do not forget to set &secret_token= with /setWebhook
 POSTGRES_URL='PLACE_YOUR_POSTGRES_URL_HERE'
 
 [placement]
